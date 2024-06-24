@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1438</width>
+    <height>789</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1414</width>
+         <height>765</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(214, 255, 192);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QFrame" name="frame_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1391</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="logo">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>191</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* or 'cover' depending on how you want it to fit */
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>Doctor2u (1).png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="title">
+            <property name="geometry">
+             <rect>
+              <x>400</x>
+              <y>0</y>
+              <width>671</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 28pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>New Hospital Registration Form</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="hospital_frame">
+           <property name="geometry">
+            <rect>
+             <x>680</x>
+             <y>110</y>
+             <width>691</width>
+             <height>601</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+    background-color: #ffffff; /* Optional: set a background color */
+    border: 2px solid #000000; /* Border width and color */
+    border-radius: 15px;       /* Border radius for rounded corners */
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="hospitalname">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>10</y>
+              <width>171</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+border: no
+</string>
+            </property>
+            <property name="text">
+             <string>Hospital Name :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospitaldescription">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>240</y>
+              <width>231</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+border: no
+</string>
+            </property>
+            <property name="text">
+             <string>Hospital Description :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospitalcontact">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>120</y>
+              <width>191</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+border: no
+</string>
+            </property>
+            <property name="text">
+             <string>Hospital Contact :</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="hospitaldesc_input">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>280</y>
+              <width>651</width>
+              <height>251</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> border: 1px solid #000000; /* Border width and color */
+    border-radius: 0px;       /* Border radius for rounded corners */
+background-color: rgb(226, 226, 226);
+</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="placeholderText">
+             <string>Hospital Description....</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="hospitalname_input">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>50</y>
+              <width>651</width>
+              <height>71</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> border: 1px solid #000000; /* Border width and color */
+background-color: rgb(226, 226, 226);
+    border-radius: 0px;       /* Border radius for rounded corners */</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="placeholderText">
+             <string>Hospital Name....</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="hospitalcontact_input">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>160</y>
+              <width>651</width>
+              <height>71</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> border: 1px solid #000000; /* Border width and color */
+    border-radius: 0px;       /* Border radius for rounded corners */
+background-color: rgb(226, 226, 226);
+</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="placeholderText">
+             <string>Hospital Contact....</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="submit_btn">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>550</y>
+              <width>191</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>MS Shell Dlg 2</family>
+              <pointsize>16</pointsize>
+              <weight>9</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(80, 229, 0);
+</string>
+            </property>
+            <property name="text">
+             <string>SUBMIT</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QLabel" name="picture">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>120</y>
+             <width>581</width>
+             <height>581</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../../Downloads/doctorcute.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

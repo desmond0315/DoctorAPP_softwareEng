@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1438</width>
+    <height>789</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-720</y>
+         <width>1393</width>
+         <height>2722</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>2700</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(214, 255, 192);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QFrame" name="frame_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1371</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="logo">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>191</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* or 'cover' depending on how you want it to fit */
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>Doctor2u (1).png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="hospitalframe">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>110</y>
+             <width>1291</width>
+             <height>721</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0.6px solid #000000; /* Border width and color */
+background-color: rgb(255, 255, 255);
+    border-radius: 15px;       /* Border radius for rounded corners */</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QTextEdit" name="hospital_desc">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>350</y>
+              <width>1271</width>
+              <height>361</height>
+             </rect>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Island Hospital                                                                                                              Contact: &lt;/span&gt;&lt;a href=&quot;https://www.google.com/search?q=gleneagles+hospital+penang+contact&amp;amp;sca_esv=9808eceaba48aaa9&amp;amp;bih=776&amp;amp;biw=1536&amp;amp;rlz=1C1ONGR_enMY1035MY1035&amp;amp;hl=en&amp;amp;ei=rIlxZqKkNpzz4-EPnM6HgA4&amp;amp;ved=0ahUKEwiiqomYn-WGAxWc-TgGHRznAeAQ4dUDCBA&amp;amp;uact=5&amp;amp;oq=gleneagles+hospital+penang+contact&amp;amp;gs_lp=Egxnd3Mtd2l6LXNlcnAaAhgCIiJnbGVuZWFnbGVzIGhvc3BpdGFsIHBlbmFuZyBjb250YWN0MgUQABiABDIGEAAYFhgeMgYQABgWGB4yAhAmMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESPEJUABYvwdwAHgAkAEAmAFvoAGDBaoBAzYuMbgBA8gBAPgBAZgCB6ACrgXCAgkQABgWGIsDGB7CAgUQJhiLA8ICCxAAGKIEGIkFGIsDwgILEAAYgAQYogQYiwPCAggQABiiBBiJBZgDAJIHAzUuMqAHkis&amp;amp;sclient=gws-wiz-serp#&quot;&gt;&lt;span style=&quot; font-family:'arial,sans-serif'; font-size:14pt; text-decoration: underline; color:#000000; background-color:#ffffff;&quot;&gt;04-238-3388&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;                                                        &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lato-Regular'; font-size:10pt; color:#000000; background-color:#ffffff;&quot;&gt;Island Hospital, founded in 1996, is a 600-bed hospital located in Penang, Malaysia. The hospital is recognised as one of the leading healthcare providers in Malaysia, serving patients from around the region. Island Hospital offers a wide range of healthcare services and is committed to providing best-in-class care to deliver care in the best interest of the patient and “to comfort always.”&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lato-Regular'; font-size:10pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lato-Regular'; font-size:10pt; color:#000000; background-color:#ffffff;&quot;&gt;Island Hospital has over 80 full-time specialists across 9 Centres of Excellence, offering a wide range of treatment services that are supported by cutting-edge medical equipment and technology. The hospital’s specialists are highly experienced and renowned in their dedicated fields, with an average of 24.4 years of practice and international exposure in their medical careers. Its commitment to providing excellent patient care has earned it recognition as one of the best hospitals in its class. As part of its ongoing efforts to improve the quality of care it provides, Island Hospital has expanded its services to aim towards becoming a Regional Quaternary Care hospital. This expansion has allowed it to offer patients an advanced level of specialised and niche treatments.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lato-Regular'; font-size:10pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lato-Regular'; font-size:10pt; color:#000000; background-color:#ffffff;&quot;&gt;As a testament to its dedication to providing high-quality healthcare services, Island Hospital was shortlisted by the Malaysia Healthcare Travel Council (MHTC) as the only hospital in Penang in the Flagship Medical Tourism Hospital Programme. The Flagship Medical Tourism Hospital Programme is an innovative initiative that aims to establish new standards in global healthcare travel, spearheaded by the Malaysia Healthcare Travel Council (MHTC) in 2022. Fully endorsed by the Government of Malaysia and the Ministry of Health, this collaborative effort with international bodies IQVIA and Joint Commission International (JCI) aims to position Malaysia as a globally renowned icon for healthcare travel, delivering exceptional end-to-end patient experiences anchored on medical and service excellence best practices and international branding. The programme is a critical component of the five-year Malaysia Healthcare Travel Industry blueprint, which seeks to provide the Best Malaysia Healthcare Travel Experience by 2025.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospital_pic1">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>381</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>islandhospital.jpeg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospital_pic1_2">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>20</y>
+              <width>401</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>islandhospital2.jpg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospital_pic1_3">
+            <property name="geometry">
+             <rect>
+              <x>900</x>
+              <y>20</y>
+              <width>371</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>islandhospital3.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="hospitalframe_2">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>1400</y>
+             <width>1291</width>
+             <height>721</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0.6px solid #000000; /* Border width and color */
+background-color: rgb(255, 255, 255);
+    border-radius: 15px;       /* Border radius for rounded corners */</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QTextEdit" name="hospital_desc_2">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>350</y>
+              <width>1271</width>
+              <height>361</height>
+             </rect>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Gleneagles Hospital                                                                                                         Contact: &lt;/span&gt;&lt;a href=&quot;https://www.google.com/search?q=gleneagles+hospital+penang+contact&amp;amp;sca_esv=9808eceaba48aaa9&amp;amp;bih=776&amp;amp;biw=1536&amp;amp;rlz=1C1ONGR_enMY1035MY1035&amp;amp;hl=en&amp;amp;ei=rIlxZqKkNpzz4-EPnM6HgA4&amp;amp;ved=0ahUKEwiiqomYn-WGAxWc-TgGHRznAeAQ4dUDCBA&amp;amp;uact=5&amp;amp;oq=gleneagles+hospital+penang+contact&amp;amp;gs_lp=Egxnd3Mtd2l6LXNlcnAaAhgCIiJnbGVuZWFnbGVzIGhvc3BpdGFsIHBlbmFuZyBjb250YWN0MgUQABiABDIGEAAYFhgeMgYQABgWGB4yAhAmMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESPEJUABYvwdwAHgAkAEAmAFvoAGDBaoBAzYuMbgBA8gBAPgBAZgCB6ACrgXCAgkQABgWGIsDGB7CAgUQJhiLA8ICCxAAGKIEGIkFGIsDwgILEAAYgAQYogQYiwPCAggQABiiBBiJBZgDAJIHAzUuMqAHkis&amp;amp;sclient=gws-wiz-serp#&quot;&gt;&lt;span style=&quot; font-family:'arial,sans-serif'; font-size:14pt; text-decoration: underline; color:#000000; background-color:#ffffff;&quot;&gt;04-222 9111&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; font-weight:600; color:#202122; background-color:#ffffff;&quot;&gt;Gleneagles Hospital Penang (GPG)&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122; background-color:#ffffff;&quot;&gt; is a &lt;/span&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Private_hospital&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; text-decoration: underline; color:#000000; background-color:#ffffff;&quot;&gt;private hospital&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122; background-color:#ffffff;&quot;&gt; in &lt;/span&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/George_Town,_Penang&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; text-decoration: underline; color:#000000; background-color:#ffffff;&quot;&gt;George Town&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122; background-color:#ffffff;&quot;&gt; within the &lt;/span&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/States_and_federal_territories_of_Malaysia&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; text-decoration: underline; color:#000000; background-color:#ffffff;&quot;&gt;Malaysian state&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122; background-color:#ffffff;&quot;&gt; of &lt;/span&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Penang&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; text-decoration: underline; color:#000000; background-color:#ffffff;&quot;&gt;Penang&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122; background-color:#ffffff;&quot;&gt;. Established in 1973, the 360-bed tertiary care provider houses over 85 doctors which cover a wide array of medical specialties, supported by more than 1,100 employees (nurses, allied health personnel and support staff). The hospital now consists of its original six-storey building and a 19-storey annex.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122; background-color:#ffffff;&quot;&gt;The Gleneagles Hospital Penang was established in 1973 and was originally a three-storey hospital with 70 beds.&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122;&quot;&gt; It was located at the junction of Jalan Cantonment and Jalan Bell. The hospital was subsequently expanded to six floors in 1977, housing 132 beds. In 1989, &lt;/span&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Parkway_Pantai&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; text-decoration: underline; color:#000000;&quot;&gt;Parkway Pantai&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122;&quot;&gt;, a &lt;/span&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Singapore_Exchange&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; text-decoration: underline; color:#000000;&quot;&gt;Singapore&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122;&quot;&gt;-listed healthcare firm, acquired the majority control of the hospital, which was then renamed the Gleneagles Medical Centre. The hospital was expanded again in 2013, with the completion of a 19-storey annex. Today it is known as Gleneagles Hospital Penang and accommodates 360 beds. The CEO of Gleneagles Hospital Penang is Mr. Ivan Loh.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:10px; margin-bottom:19px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122; background-color:#ffffff;&quot;&gt;Gleneagles Hospital Penang is one of 16 hospitals operated by Pantai Holdings Sdn Bhd (Pantai Group), which is part of Parkway Pantai Limited, a subsidiary of&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/IHH_Healthcare&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; text-decoration: underline; color:#000000;&quot;&gt;IHH Healthcare&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:10pt; color:#202122;&quot;&gt; Berhad (IHH).&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospital_pic1_4">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>381</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>gleneagle.jpg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospital_pic1_5">
+            <property name="geometry">
+             <rect>
+              <x>430</x>
+              <y>20</y>
+              <width>441</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>gleneagles2.jpeg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hospital_pic1_6">
+            <property name="geometry">
+             <rect>
+              <x>900</x>
+              <y>20</y>
+              <width>371</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>gmc.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="mapframe1">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>870</y>
+             <width>1271</width>
+             <height>491</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+          <widget class="QFrame" name="mapframe2">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>2160</y>
+             <width>1271</width>
+             <height>491</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
