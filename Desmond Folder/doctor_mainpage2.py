@@ -1,9 +1,30 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtCore import QUrl
 from appoinmentpage import Ui_MainWindow as AppointmentUi_MainWindow
 from profilepage import Ui_MainWindow as Ui_ProfileWindow  # Import the Ui_ProfileWindow class
 from finddoctorpage import Ui_MainWindow as FindDoctorUi_MainWindow
 from hospitalpage import Ui_MainWindow as HospitalUi_MainWindow
 from new_hospital_join import Ui_MainWindow as joinUi_MainWindow
+import pyrebase
+import atexit
+
+
+firebaseConfig = {
+    'apiKey': "AIzaSyCVw3U9mV4RZsv4ByZf8bYUHicSbtdqLpo",
+    'authDomain': "doctorapp-5009cem.firebaseapp.com",
+    'databaseURL': "https://doctorapp-5009cem-default-rtdb.firebaseio.com",
+    'projectId': "doctorapp-5009cem",
+    'storageBucket': "doctorapp-5009cem.appspot.com",
+    'messagingSenderId': "534087094334",
+    'appId': "1:534087094334:web:90a701b5db96341b32416f",
+    'measurementId': "G-K3CERXJ1VT"
+}
+
+firebase = pyrebase.initialize_app(firebaseConfig)
+auth = firebase.auth()
+db = firebase.database()
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -70,7 +91,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.logo.setText("")
-        self.logo.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\Doctor2u (1).png"))
+        self.logo.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\Doctor2u (1).png"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
         self.request_btn = QtWidgets.QPushButton(self.header)
@@ -79,7 +100,7 @@ class Ui_MainWindow(object):
         self.request_btn.setStyleSheet("border-radius: 40px;")
         self.request_btn.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\request.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\request.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.request_btn.setIcon(icon)
         self.request_btn.setIconSize(QtCore.QSize(40, 40))
         self.request_btn.setCheckable(False)
@@ -168,7 +189,7 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "}")
         self.leftphoto.setText("")
-        self.leftphoto.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\doctorleftframe.jpg"))
+        self.leftphoto.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\doctorleftframe.jpg"))
         self.leftphoto.setScaledContents(True)
         self.leftphoto.setObjectName("leftphoto")
         self.right_frame = QtWidgets.QFrame(self.center_frame)
@@ -230,11 +251,13 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "}")
         self.rightphoto.setText("")
-        self.rightphoto.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\doctorleftframee.webp"))
+        self.rightphoto.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\doctorrightframe.jpg"))
         self.rightphoto.setScaledContents(True)
         self.rightphoto.setObjectName("rightphoto")
         MainWindow.setCentralWidget(self.centralwidget)
-
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -256,7 +279,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.FindDoc_btn.setText(_translate("MainWindow", "Find A Doctor"))
         self.Profile_btn.setText(_translate("MainWindow", "Profile"))
-        self.Appoinment_btn.setText(_translate("MainWindow", "Appoinment"))
+        self.Appoinment_btn.setText(_translate("MainWindow", "Appointment"))
         self.Hospital_btn.setText(_translate("MainWindow", "Hospital"))
         self.join_btn.setText(_translate("MainWindow", "JOIN US !"))
         self.title.setText(_translate("MainWindow", "Book your consultation with your doctor anywhere !"))
@@ -350,18 +373,42 @@ class SmallWindow(QtWidgets.QWidget):
     def initUI(self):
         layout = QtWidgets.QVBoxLayout()
 
+        # Get logged in user email
+        loggedin = db.child("loggedin").get()
+        l_email = loggedin.val()["email"]
+
+        appointment = db.child("appointment").get()
+        for appointments in appointment.each():
+            a_firstname = appointments.val()["firstname"]
+            a_lastname = appointments.val()["lastname"]
+            a_username = appointments.val()["username"]
+            a_hospital = appointments.val()["hospital"]
+            a_doctor = appointments.val()["doctor"]
+            a_time = appointments.val()["time"]
+            a_date = appointments.val()["date"]
+            a_medreq = appointments.val()["medreq"]
+            a_email = appointments.val()["email"]
+            if a_email == l_email:
+                break
+
         # Example label for Patient's Name (replace with dynamic data)
         self.name_label = QtWidgets.QLabel("Name: ", self)
         layout.addWidget(self.name_label)
+        self.name_label.setText(f"Name: {a_firstname} {a_lastname}")
 
         # Table for Recent Appointments (replace with dynamic data)
-        self.recent_appointments_label = QtWidgets.QLabel("Recent Appointments:", self)
+        self.recent_appointments_label = QtWidgets.QLabel("Pending Appointments:", self)
         layout.addWidget(self.recent_appointments_label)
         self.appointments_table = QtWidgets.QTableWidget(self)
         self.appointments_table.setColumnCount(3)
         self.appointments_table.setHorizontalHeaderLabels(["Date", "Doctor", "Hospital"])
 
         layout.addWidget(self.appointments_table)
+
+        self.appointments_table.setRowCount(1)
+        self.appointments_table.setItem(0, 0, QtWidgets.QTableWidgetItem(a_date))
+        self.appointments_table.setItem(0, 1, QtWidgets.QTableWidgetItem(a_doctor))
+        self.appointments_table.setItem(0, 2, QtWidgets.QTableWidgetItem(a_hospital))
 
         # Close button
         self.close_button = QtWidgets.QPushButton("Close", self)
@@ -384,6 +431,12 @@ class SmallWindow(QtWidgets.QWidget):
     def show_at_location(self, x, y):
         self.move(x, y)
         self.show()
+
+def exit_handler():
+    db.child("loggedin").remove()
+
+
+atexit.register(exit_handler)
 
 
 if __name__ == "__main__":
