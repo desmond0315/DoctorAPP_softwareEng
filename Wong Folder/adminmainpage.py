@@ -1,7 +1,27 @@
 from PyQt5 import QtCore, QtWidgets
 from adddoctor import Ui_Dialog as AddDoctorUi_Dialog
-from requestsdoctor import Ui_Dialog as RequestsDoctorUI_Dialog
-from list_of_doctor import Ui_Dialog as ListOfDoctorUI_Dialog
+from requestsdoctor import Ui_MainWindow as RequestsDoctorUI_MainWindow
+from list_of_doctor import Ui_MainWindow as ListOfDoctorUI_MainWindow
+import pyrebase
+import atexit
+
+
+firebaseConfig = {
+    'apiKey': "AIzaSyCVw3U9mV4RZsv4ByZf8bYUHicSbtdqLpo",
+    'authDomain': "doctorapp-5009cem.firebaseapp.com",
+    'databaseURL': "https://doctorapp-5009cem-default-rtdb.firebaseio.com",
+    'projectId': "doctorapp-5009cem",
+    'storageBucket': "doctorapp-5009cem.appspot.com",
+    'messagingSenderId': "534087094334",
+    'appId': "1:534087094334:web:90a701b5db96341b32416f",
+    'measurementId': "G-K3CERXJ1VT"
+}
+
+firebase = pyrebase.initialize_app(firebaseConfig)
+auth = firebase.auth()
+db = firebase.database()
+
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
@@ -67,10 +87,10 @@ class Ui_Dialog(object):
         try:
             print("Navigating to request doctor page...")
             # create an instance of the request doctor page UI
-            self.requestsdoctor_dialog = QtWidgets.QDialog()
-            self.requestsdoctor_ui = RequestsDoctorUI_Dialog()
-            self.requestsdoctor_ui.setupUi(self.requestsdoctor_dialog)
-            self.requestsdoctor_dialog.show()
+            self.requestsdoctor_mainwindow = QtWidgets.QMainWindow()
+            self.requestsdoctor_ui = RequestsDoctorUI_MainWindow()
+            self.requestsdoctor_ui.setupUi(self.requestsdoctor_mainwindow)
+            self.requestsdoctor_mainwindow.show()
 
             # self.Dialog.close()
         except Exception as e:
@@ -79,15 +99,21 @@ class Ui_Dialog(object):
     def navigate_to_list_of_doctor_page(self):
         try:
             print("Navigating to list of doctor page...")
-            self.list_of_doctor_dialog = QtWidgets.QDialog()
-            self.list_of_doctor_ui = ListOfDoctorUI_Dialog()
-            self.list_of_doctor_ui.setupUi(self.list_of_doctor_dialog)
-            self.list_of_doctor_dialog.show()
+            self.list_of_doctor_mainwindow = QtWidgets.QMainWindow()
+            self.list_of_doctor_ui = ListOfDoctorUI_MainWindow()
+            self.list_of_doctor_ui.setupUi(self.list_of_doctor_mainwindow)
+            self.list_of_doctor_mainwindow.show()
         except Exception as e:
             print("Error",e)
 
+#def exit_handler():
+#    db.child("loggedin").remove()
 
-if __name__ == "__main__":
+
+#atexit.register(exit_handler)
+
+
+if _name_ == "_main_":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
