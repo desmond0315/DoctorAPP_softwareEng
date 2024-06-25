@@ -224,7 +224,7 @@ class Ui_MainWindow(object):
                 break
 
         data = {"firstname": u_firstname, "lastname": u_lastname, "username": u_username, "hospital": hospital, "doctor": doctor, "time": time, "date": date, "medreq": medical_request, "email": u_email, "age": age, "ic_number": u_ic_number}
-        db.child("appointment").child(u_username).update(data)
+        db.child("appointment_pending").child(u_username).set(data)
 
 
 if __name__ == "__main__":

@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.logo.setText("")
-        self.logo.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\Doctor2u (1).png"))
+        self.logo.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\Doctor2u (1).png"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
 
@@ -62,7 +62,7 @@ class Ui_MainWindow(object):
         self.doctorpic.setGeometry(QtCore.QRect(30, 70, 211, 211))
         self.doctorpic.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic.setText("")
-        self.doctorpic.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\docpic2.png"))
+        self.doctorpic.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\docpic2.jpg"))
         self.doctorpic.setScaledContents(True)
         self.doctorpic.setObjectName("doctorpic")
         self.doctorframe_2 = QtWidgets.QFrame(self.frame)
@@ -83,7 +83,7 @@ class Ui_MainWindow(object):
         self.doctorpic_3.setGeometry(QtCore.QRect(30, 80, 211, 211))
         self.doctorpic_3.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic_3.setText("")
-        self.doctorpic_3.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\docpic1.png"))
+        self.doctorpic_3.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\docpic1.jpg"))
         self.doctorpic_3.setScaledContents(True)
         self.doctorpic_3.setObjectName("doctorpic_3")
         self.doctorframe_3 = QtWidgets.QFrame(self.frame)
@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
         self.doctorpic_4.setGeometry(QtCore.QRect(30, 70, 211, 211))
         self.doctorpic_4.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic_4.setText("")
-        self.doctorpic_4.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\docpic3.png"))
+        self.doctorpic_4.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\docpic3.jpg"))
         self.doctorpic_4.setScaledContents(True)
         self.doctorpic_4.setObjectName("doctorpic_4")
         self.doctor_desc_4 = QtWidgets.QTextEdit(self.doctorframe_3)
@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
         self.doctorpic_5.setGeometry(QtCore.QRect(30, 70, 211, 211))
         self.doctorpic_5.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic_5.setText("")
-        self.doctorpic_5.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\docpic4.png"))
+        self.doctorpic_5.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\docpic4.jpg"))
         self.doctorpic_5.setScaledContents(True)
         self.doctorpic_5.setObjectName("doctorpic_5")
         self.doctorframe_5 = QtWidgets.QFrame(self.frame)
@@ -146,7 +146,7 @@ class Ui_MainWindow(object):
         self.doctorpic_6.setGeometry(QtCore.QRect(30, 70, 211, 211))
         self.doctorpic_6.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic_6.setText("")
-        self.doctorpic_6.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\doctor5.png"))
+        self.doctorpic_6.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\doctor5.jpg"))
         self.doctorpic_6.setScaledContents(True)
         self.doctorpic_6.setObjectName("doctorpic_6")
         self.doctorframe_6 = QtWidgets.QFrame(self.frame)
@@ -167,7 +167,7 @@ class Ui_MainWindow(object):
         self.doctorpic_7.setGeometry(QtCore.QRect(30, 70, 211, 211))
         self.doctorpic_7.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic_7.setText("")
-        self.doctorpic_7.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\doctor6.png"))
+        self.doctorpic_7.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\doctor6.jpg"))
         self.doctorpic_7.setScaledContents(True)
         self.doctorpic_7.setObjectName("doctorpic_7")
         self.doctorframe_7 = QtWidgets.QFrame(self.frame)
@@ -188,7 +188,7 @@ class Ui_MainWindow(object):
         self.doctorpic_8.setGeometry(QtCore.QRect(30, 70, 211, 211))
         self.doctorpic_8.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic_8.setText("")
-        self.doctorpic_8.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\doctor7.png"))
+        self.doctorpic_8.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\doctor7.jpg"))
         self.doctorpic_8.setScaledContents(True)
         self.doctorpic_8.setObjectName("doctorpic_8")
         self.doctorframe_8 = QtWidgets.QFrame(self.frame)
@@ -209,7 +209,7 @@ class Ui_MainWindow(object):
         self.doctorpic_9.setGeometry(QtCore.QRect(30, 70, 211, 211))
         self.doctorpic_9.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.doctorpic_9.setText("")
-        self.doctorpic_9.setPixmap(QtGui.QPixmap("C:\\Users\\60111\\PycharmProjects\\DoctorApp\\doctor8.png"))
+        self.doctorpic_9.setPixmap(QtGui.QPixmap("D:\\Documents (Extras)\\Additional Program Files\\PycharmProjects\\DoctorApp\\doctor8.jpg"))
         self.doctorpic_9.setScaledContents(True)
         self.doctorpic_9.setObjectName("doctorpic_9")
         self.verticalLayout.addWidget(self.frame)
@@ -336,6 +336,7 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:600;\">Dr Anand Raj -- Island Hospital</span></p></body></html>"))
+
 
 
 

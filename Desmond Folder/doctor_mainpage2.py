@@ -271,9 +271,6 @@ class Ui_MainWindow(object):
         self.Hospital_btn.clicked.connect(self.navigate_to_hospital_page)
         self.join_btn.clicked.connect(self.navigate_to_join_page)
 
-
-
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -302,6 +299,7 @@ class Ui_MainWindow(object):
             # Close the main window of the previous page
         except Exception as e:
             print("Error:", e)
+
     def navigate_to_appointment_page(self):
         try:
             print("Navigating to appointment page...")
@@ -328,7 +326,6 @@ class Ui_MainWindow(object):
         except Exception as e:
             print("Error:", e)
 
-
     def navigate_to_profile_page(self):
         try:
             print("Navigating to profile page...")
@@ -352,7 +349,7 @@ class Ui_MainWindow(object):
             self.find_doctor_window.show()
 
             # Close the main window of the previous page
-            self.MainWindow.close()
+            # self.MainWindow.close()
         except Exception as e:
             print("Error:", e)
 
@@ -391,10 +388,31 @@ class SmallWindow(QtWidgets.QWidget):
             if a_email == l_email:
                 break
 
+        aa_firstname = a_firstname
+        aa_lastname = a_lastname
+        aa_username = a_username
+        aa_hospital = a_hospital
+        aa_doctor = a_doctor
+        aa_time = a_time
+        aa_date = a_date
+        aa_medreq = a_medreq
+        aa_email = a_email
+
+        if a_email != l_email:
+            aa_firstname = ""
+            aa_lastname = ""
+            aa_username = ""
+            aa_hospital = ""
+            aa_doctor = ""
+            aa_time = ""
+            aa_date = ""
+            aa_medreq = ""
+            aa_email = ""
+
         # Example label for Patient's Name (replace with dynamic data)
         self.name_label = QtWidgets.QLabel("Name: ", self)
         layout.addWidget(self.name_label)
-        self.name_label.setText(f"Name: {a_firstname} {a_lastname}")
+        self.name_label.setText(f"Name: {aa_firstname} {aa_lastname}")
 
         # Table for Recent Appointments (replace with dynamic data)
         self.recent_appointments_label = QtWidgets.QLabel("Pending Appointments:", self)
@@ -406,9 +424,9 @@ class SmallWindow(QtWidgets.QWidget):
         layout.addWidget(self.appointments_table)
 
         self.appointments_table.setRowCount(1)
-        self.appointments_table.setItem(0, 0, QtWidgets.QTableWidgetItem(a_date))
-        self.appointments_table.setItem(0, 1, QtWidgets.QTableWidgetItem(a_doctor))
-        self.appointments_table.setItem(0, 2, QtWidgets.QTableWidgetItem(a_hospital))
+        self.appointments_table.setItem(0, 0, QtWidgets.QTableWidgetItem(aa_date))
+        self.appointments_table.setItem(0, 1, QtWidgets.QTableWidgetItem(aa_doctor))
+        self.appointments_table.setItem(0, 2, QtWidgets.QTableWidgetItem(aa_hospital))
 
         # Close button
         self.close_button = QtWidgets.QPushButton("Close", self)

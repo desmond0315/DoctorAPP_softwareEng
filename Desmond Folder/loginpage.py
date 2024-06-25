@@ -84,7 +84,6 @@ class Ui_Dialog(object):
         self.doctorlogin_btn.clicked.connect(lambda: self.doctor_action(Dialog))
         self.login_btn.clicked.connect(lambda: self.login_action(Dialog))
 
-
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
@@ -159,6 +158,9 @@ class Ui_Dialog(object):
 
                         except Exception as e:
                             print("An error occurred:", e)
+
+                    else:
+                        QMessageBox.warning(Dialog, "Login Failed", "Invalid username or password.")
 
             else:
                 try:

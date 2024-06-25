@@ -1,7 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import re
 import pyrebase
-import atexit
 
 
 firebaseConfig = {
@@ -280,12 +279,6 @@ class Ui_MainWindow(object):
 
             QtWidgets.QMessageBox.information(MainWindow, "Success", "Profile saved successfully.")
             MainWindow.close()
-
-def exit_handler():
-        None
-
-
-atexit.register(exit_handler)
 
 
 if __name__ == "__main__":
