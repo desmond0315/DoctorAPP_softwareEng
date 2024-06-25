@@ -113,9 +113,9 @@ class Ui_Dialog(object):
                     for datapassword in data.each():
                         if password == (datapassword.val()["password"]):
                             try:
-                                import doctor_mainpage2
+                                import doctor_patientlist
                                 self.new_page = QtWidgets.QMainWindow()
-                                self.ui = doctor_mainpage2.Ui_MainWindow()
+                                self.ui = doctor_patientlist.Ui_MainWindow()
                                 self.ui.setupUi(self.new_page)
                                 self.new_page.show()
                                 Dialog.close()  # Close the current dialog

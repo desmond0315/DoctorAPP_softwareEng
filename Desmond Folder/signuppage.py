@@ -3,7 +3,6 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 import sys
 import re
 import pyrebase
-import atexit
 
 firebaseConfig = {
     'apiKey': "AIzaSyCVw3U9mV4RZsv4ByZf8bYUHicSbtdqLpo",
@@ -317,13 +316,6 @@ class Ui_Dialog(object):
             self.confirmpassword.setEchoMode(QtWidgets.QLineEdit.Normal)
         else:
             self.confirmpassword.setEchoMode(QtWidgets.QLineEdit.Password)
-
-
-def exit_handler():
-    db.child("loggedin").remove()
-
-
-atexit.register(exit_handler)
 
 
 if __name__ == "__main__":
